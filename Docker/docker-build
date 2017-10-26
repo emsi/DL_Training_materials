@@ -1,5 +1,6 @@
 #!/bin/bash
 cwd=$(pwd)
+mkdir Keras-examples
 cd Keras-examples/ && \
 git init && \
 git remote add origin -f https://github.com/fchollet/keras && \
