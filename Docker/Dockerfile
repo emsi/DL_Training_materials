@@ -6,7 +6,8 @@ RUN mkdir -p /notebooks/Keras-examples
 COPY Keras-examples/examples /notebooks/Keras-examples
 
 RUN mkdir -p /notebooks/DL_Training_materials
-COPY 1 Image Recognition 2 Text Classification /notebooks/DL_Training_materials
+COPY ["1 Image Recognition", "/notebooks/DL_Training_materials"]
+COPY ["2 Text Classification", "/notebooks/DL_Training_materials"]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
