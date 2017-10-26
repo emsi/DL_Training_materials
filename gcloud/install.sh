@@ -39,4 +39,4 @@ docker run -d --name nginx-gen --volumes-from nginx -v /rev-proxy/nginx.tmpl:/et
 docker run -d --name nginx-letsencrypt -e "NGINX_DOCKER_GEN_CONTAINER=nginx-gen" --volumes-from nginx -v /rev-proxy/certs/:/etc/nginx/certs:rw -v /var/run/docker.sock:/var/run/docker.sock:ro jrcs/letsencrypt-nginx-proxy-companion
 
 # emsi/dl_training docker
-docker run -d --name dl-google -h d-google -e "VIRTUAL_HOST=dl-google.qpqp01.pl" -e "LETSENCRYPT_HOST=dl-google.qpqp01.pl" -e "LETSENCRYPT_EMAIL=emsi@qpqp01.pl" -e "VIRTUAL_PORT=8888" emsi/dl_training
+nvidia-docker run -d --name dl-google -h d-google -e "VIRTUAL_HOST=dl-google.qpqp01.pl" -e "LETSENCRYPT_HOST=dl-google.qpqp01.pl" -e "LETSENCRYPT_EMAIL=emsi@qpqp01.pl" -e "VIRTUAL_PORT=8888" emsi/dl_training
